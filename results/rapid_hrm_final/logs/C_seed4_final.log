@@ -1,0 +1,59 @@
+device: cuda
+max_steps=10000 (batch)  eval_every=500  N_SUP=4  init_seed=4  resume=False
+-> aggiornamenti totali effettivi per modello: 40000
+LR effettivi usati: A=2.5e-05  C=2.5e-05
+train_tasks=320  held_out_tasks=80
+
+============================================================
+LONG RUN CON DEEP SUPERVISION -- MODEL C  (lr=2.5e-05, N_SUP=4, init_seed=4)
+============================================================
+parametri: 7,535,712
+esempi di training: 1381
+[C seed=4] step   500/10000  avg_seg_loss=0.2094  held-out exact=0/80  real_acc=42.37%  correct_dims=52/80  elapsed=18.0 min
+[C seed=4] step  1000/10000  avg_seg_loss=0.2383  held-out exact=0/80  real_acc=42.74%  correct_dims=52/80  elapsed=36.0 min
+[C seed=4] step  1500/10000  avg_seg_loss=0.0827  held-out exact=0/80  real_acc=49.93%  correct_dims=58/80  elapsed=53.9 min
+[C seed=4] step  2000/10000  avg_seg_loss=0.0692  held-out exact=0/80  real_acc=61.38%  correct_dims=54/80  elapsed=71.9 min
+[C seed=4] step  2500/10000  avg_seg_loss=0.3907  held-out exact=0/80  real_acc=60.68%  correct_dims=56/80  elapsed=89.9 min
+[C seed=4] step  3000/10000  avg_seg_loss=0.1044  held-out exact=0/80  real_acc=63.18%  correct_dims=56/80  elapsed=107.9 min
+[C seed=4] step  3500/10000  avg_seg_loss=0.3347  held-out exact=0/80  real_acc=67.25%  correct_dims=53/80  elapsed=125.9 min
+[C seed=4] step  4000/10000  avg_seg_loss=0.0998  held-out exact=0/80  real_acc=69.35%  correct_dims=59/80  elapsed=143.8 min
+[C seed=4] step  4500/10000  avg_seg_loss=0.1487  held-out exact=0/80  real_acc=69.61%  correct_dims=57/80  elapsed=161.8 min
+[C seed=4] step  5000/10000  avg_seg_loss=0.0528  held-out exact=0/80  real_acc=65.59%  correct_dims=55/80  elapsed=179.8 min
+[C seed=4] step  5500/10000  avg_seg_loss=0.0818  held-out exact=0/80  real_acc=72.59%  correct_dims=58/80  elapsed=197.8 min
+[C seed=4] step  6000/10000  avg_seg_loss=0.2442  held-out exact=0/80  real_acc=68.89%  correct_dims=55/80  elapsed=215.8 min
+[C seed=4] step  6500/10000  avg_seg_loss=0.1497  held-out exact=0/80  real_acc=71.46%  correct_dims=57/80  elapsed=233.8 min
+[C seed=4] step  7000/10000  avg_seg_loss=0.0860  held-out exact=0/80  real_acc=74.64%  correct_dims=56/80  elapsed=251.7 min
+[C seed=4] step  7500/10000  avg_seg_loss=0.1451  held-out exact=0/80  real_acc=65.94%  correct_dims=61/80  elapsed=269.7 min
+[C seed=4] step  8000/10000  avg_seg_loss=0.0897  held-out exact=0/80  real_acc=71.47%  correct_dims=56/80  elapsed=287.7 min
+[C seed=4] step  8500/10000  avg_seg_loss=0.0477  held-out exact=0/80  real_acc=70.71%  correct_dims=55/80  elapsed=305.7 min
+[C seed=4] step  9000/10000  avg_seg_loss=0.1822  held-out exact=0/80  real_acc=60.18%  correct_dims=54/80  elapsed=323.6 min
+[C seed=4] step  9500/10000  avg_seg_loss=0.0629  held-out exact=0/80  real_acc=75.48%  correct_dims=57/80  elapsed=341.6 min
+[C seed=4] step 10000/10000  avg_seg_loss=0.1275  held-out exact=0/80  real_acc=72.29%  correct_dims=57/80  elapsed=359.6 min
+
+Curva di apprendimento -- MODEL C seed=4 (lr=2.5e-05, N_SUP=4):
+  step      exact  real_acc%  correct_dims
+   500    0/80        42.37      52/80
+  1000    0/80        42.74      52/80
+  1500    0/80        49.93      58/80
+  2000    0/80        61.38      54/80
+  2500    0/80        60.68      56/80
+  3000    0/80        63.18      56/80
+  3500    0/80        67.25      53/80
+  4000    0/80        69.35      59/80
+  4500    0/80        69.61      57/80
+  5000    0/80        65.59      55/80
+  5500    0/80        72.59      58/80
+  6000    0/80        68.89      55/80
+  6500    0/80        71.46      57/80
+  7000    0/80        74.64      56/80
+  7500    0/80        65.94      61/80
+  8000    0/80        71.47      56/80
+  8500    0/80        70.71      55/80
+  9000    0/80        60.18      54/80
+  9500    0/80        75.48      57/80
+ 10000    0/80        72.29      57/80
+
+Delta di real_acc tra eval successive: [0.37, 7.19, 11.45, -0.7, 2.5, 4.07, 2.1, 0.26, -4.02, 7.0, -3.71, 2.57, 3.18, -8.7, 5.53, -0.77, -10.53, 15.31, -3.19]
+Media |delta| ultime 3 eval: 9.68 punti
+-> ANCORA IN MOVIMENTO: l'accuratezza continua a cambiare in modo
+   apprezzabile -- potrebbe servire ancora piu' budget.

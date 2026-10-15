@@ -1,0 +1,17 @@
+{
+  "HRM": {
+    "upstream_url": "https://github.com/sapientinc/HRM.git",
+    "checkout_commit": "ac15626f8db096a63c775b84c9dc868776a6feda",
+    "note": "Checkout reference only. Locally added experimental files and publication adaptations are not identified by this commit."
+  },
+  "TRM": {
+    "upstream_url": "https://github.com/SamsungSAILMontreal/TinyRecursiveModels",
+    "checkout_commit": "c01103738605ba39d1430519b1ee0c62f4c707f8",
+    "note": "Checkout reference only. Locally added experimental files and publication adaptations are not identified by this commit."
+  },
+  "URM": {
+    "upstream_url": "https://github.com/UbiquantAI/URM.git",
+    "checkout_commit": "c14e55f5f9227873617015cf60a239126b55adcd",
+    "note": "Checkout reference only. Locally added experimental files and publication adaptations are not identified by this commit."
+  }
+}

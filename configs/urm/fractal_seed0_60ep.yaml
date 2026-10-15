@@ -1,0 +1,54 @@
+arch:
+  name: urm_fractal@URM
+  loss:
+    name: components.urm.losses@ACTLossHead
+    loss_type: stablemax_cross_entropy
+  loops: 16
+  num_layers: 4
+  hidden_size: 512
+  num_heads: 8
+  expansion: 4
+  H_cycles: 2
+  L_cycles: 6
+  M_cycles: 2
+  L_cycles_inner: 2
+  loop_deltas:
+  - 0
+  - 8
+  puzzle_emb_ndim: 512
+  pos_encodings: rope
+  profile: true
+  eval_interval: 1000
+  checkpoint_every_eval: true
+  checkpoint_path: checkpoints/urm/fractal_seed0_60ep
+  ema: true
+  ema_rate: 0.999
+data_path: datasets/urm/arc-aug-1000-trainonly
+evaluators:
+- name: urm_arc@ARC
+global_batch_size: 48
+epochs: 60
+lr: 0.0001
+lr_min_ratio: 1.0
+lr_warmup_steps: 2000
+weight_decay: 0.1
+beta1: 0.9
+beta2: 0.95
+target_q_update_every: 4
+puzzle_emb_lr: 0.01
+puzzle_emb_weight_decay: 0.1
+grad_accum_steps: 1
+project_name: fractal-recursion-urm
+run_name: fractal_seed0_60ep
+checkpoint_path: checkpoints/urm/fractal_seed0_60ep
+load_checkpoint: null
+load_strict: true
+load_optimizer_state: true
+seed: 0
+checkpoint_every_eval: true
+eval_interval: 15
+eval_save_outputs: []
+loop_deltas: []
+ema: true
+ema_rate: 0.999
+use_muon: false

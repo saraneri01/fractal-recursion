@@ -1,0 +1,26 @@
+# Direct dependencies and upstream build requirements.
+# Install a CUDA-compatible PyTorch build for GPU execution.
+# HRM and URM attention modules also require FlashAttention;
+# installation instructions belong in README.md.
+torch
+numpy
+PyYAML
+adam-atan2
+einops
+tqdm
+coolname
+pydantic
+argdantic
+wandb
+omegaconf
+hydra-core
+huggingface_hub
+numba
+matplotlib
+packaging
+ninja
+wheel
+setuptools
+setuptools-scm
+pydantic-core
+triton

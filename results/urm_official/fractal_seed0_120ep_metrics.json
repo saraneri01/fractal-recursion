@@ -1,0 +1,20 @@
+{
+  "ARC/maj@10": 0.0,
+  "ARC/maj@100": 0.0,
+  "ARC/maj@1000": 0.0,
+  "ARC/maj@10000": 0.0,
+  "ARC/pass@1": 0.0,
+  "ARC/pass@10": 0.0,
+  "ARC/pass@100": 0.0,
+  "ARC/pass@1000": 0.0,
+  "ARC/pass@2": 0.0,
+  "ARC/pass@5": 0.0,
+  "all": {
+    "accuracy": 0.627972424030304,
+    "exact_accuracy": 8.812536543700844e-05,
+    "lm_loss": 1.285727620124817,
+    "q_halt_accuracy": 0.9989787936210632,
+    "q_halt_loss": 0.005419837310910225,
+    "steps": 16.0
+  }
+}

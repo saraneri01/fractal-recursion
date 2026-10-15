@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Datasets and model checkpoints
+/datasets/
+/checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Generated experiment outputs
+/runs/
+/outputs/
+/multirun/
+/wandb/
+
+# Local environment and editor files
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+.DS_Store

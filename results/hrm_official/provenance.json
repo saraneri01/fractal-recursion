@@ -1,0 +1,16 @@
+{
+  "files": [
+    {
+      "file": "trajectory_audit_seed0_step4886.json",
+      "source_relative_to_hrm_original": "audits/A_C2_overthinking_matched_fulltrain_step4886_v2.json",
+      "bytes": 20599349,
+      "sha256": "833fd0bb9b08ca3864ea628dc587077d494d910b417f743999c5fd2a5bd411a0"
+    },
+    {
+      "file": "fractal_c2_seed0_step4886_eval.log",
+      "source_relative_to_hrm_original": "logs/hrmf_c2_eval4886_v1.log",
+      "bytes": 1439,
+      "sha256": "76138b252a3b945441bdd78ac489a700923659aa189e2b61f6768321e15a0fb0"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "file": "seeds1to4.log",
+    "original_path": "/home/sneri/fractal_hrm/logs/final_multiseed/seeds1to4.log",
+    "sha256": "a4e60a6ba433a86c3852ce1e3b1a55d2e88e5b6174362e64977a81408a86edf2",
+    "bytes": 32472
+  },
+  {
+    "file": "C_seed4_final.log",
+    "original_path": "/home/sneri/fractal_hrm/logs/final_multiseed/C_seed4_final.log",
+    "sha256": "a8bfd6526c0152fc1e13dadb305b5ccd9ba41250a955aa79eefa61976eed5b29",
+    "bytes": 4189
+  }
+]

@@ -1,0 +1,127 @@
+{
+  "description": "Metadata read from the prepared datasets associated with the runs. Matching metadata alone does not establish identical dataset contents.",
+  "datasets": {
+    "hrm": {
+      "train": {
+        "metadata": {
+          "pad_id": 0,
+          "ignore_label_id": 0,
+          "blank_identifier_id": 0,
+          "vocab_size": 12,
+          "seq_len": 900,
+          "num_puzzle_identifiers": 876407,
+          "total_groups": 960,
+          "mean_puzzle_examples": 4.145825108454301,
+          "sets": [
+            "all"
+          ]
+        },
+        "metadata_file_sha256": "f85a09c232b9bba3720c850ed696b935b148abdaff54d1d9f459c0acde638e76"
+      },
+      "test": {
+        "metadata": {
+          "pad_id": 0,
+          "ignore_label_id": 0,
+          "blank_identifier_id": 0,
+          "vocab_size": 12,
+          "seq_len": 900,
+          "num_puzzle_identifiers": 876407,
+          "total_groups": 400,
+          "mean_puzzle_examples": 1.0479832893746825,
+          "sets": [
+            "all"
+          ]
+        },
+        "metadata_file_sha256": "fb01488625acc4a42667005ae702ce953569f49465319c9e1e72b76f5cb9d3b7"
+      }
+    },
+    "trm": {
+      "train": {
+        "metadata": {
+          "pad_id": 0,
+          "ignore_label_id": 0,
+          "blank_identifier_id": 0,
+          "vocab_size": 12,
+          "seq_len": 900,
+          "num_puzzle_identifiers": 876406,
+          "total_groups": 960,
+          "mean_puzzle_examples": 4.1458115825446,
+          "total_puzzles": 876405,
+          "sets": [
+            "all"
+          ]
+        },
+        "metadata_file_sha256": "1c526eae3a6b09494f28839de30c7483a6cd8bbe8c1e141a11f4df22985b6720"
+      },
+      "test": {
+        "metadata": {
+          "pad_id": 0,
+          "ignore_label_id": 0,
+          "blank_identifier_id": 0,
+          "vocab_size": 12,
+          "seq_len": 900,
+          "num_puzzle_identifiers": 876406,
+          "total_groups": 400,
+          "mean_puzzle_examples": 1.0479831590384354,
+          "total_puzzles": 368150,
+          "sets": [
+            "all"
+          ]
+        },
+        "metadata_file_sha256": "a327206f50a9c83b035caf1c08481dc3a96f7f331dd32645f7eaaa147649fe7b"
+      }
+    },
+    "urm_train": {
+      "train": {
+        "metadata": {
+          "pad_id": 0,
+          "ignore_label_id": 0,
+          "blank_identifier_id": 0,
+          "vocab_size": 12,
+          "seq_len": 900,
+          "num_puzzle_identifiers": 876407,
+          "total_groups": 960,
+          "mean_puzzle_examples": 4.145825108454301,
+          "sets": [
+            "all"
+          ]
+        },
+        "metadata_file_sha256": "f85a09c232b9bba3720c850ed696b935b148abdaff54d1d9f459c0acde638e76"
+      }
+    },
+    "urm_eval": {
+      "train": {
+        "metadata": {
+          "pad_id": 0,
+          "ignore_label_id": 0,
+          "blank_identifier_id": 0,
+          "vocab_size": 12,
+          "seq_len": 900,
+          "num_puzzle_identifiers": 876407,
+          "total_groups": 960,
+          "mean_puzzle_examples": 4.145825108454301,
+          "sets": [
+            "all"
+          ]
+        },
+        "metadata_file_sha256": "f85a09c232b9bba3720c850ed696b935b148abdaff54d1d9f459c0acde638e76"
+      },
+      "test": {
+        "metadata": {
+          "pad_id": 0,
+          "ignore_label_id": 0,
+          "blank_identifier_id": 0,
+          "vocab_size": 12,
+          "seq_len": 900,
+          "num_puzzle_identifiers": 876407,
+          "total_groups": 400,
+          "mean_puzzle_examples": 1.0479832893746825,
+          "sets": [
+            "all"
+          ]
+        },
+        "metadata_file_sha256": "fb01488625acc4a42667005ae702ce953569f49465319c9e1e72b76f5cb9d3b7"
+      }
+    }
+  }
+}

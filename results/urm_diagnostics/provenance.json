@@ -1,0 +1,64 @@
+{
+  "files": [
+    {
+      "file": "urmf_internal_dynamics_v1.json",
+      "source_relative_to_urm_original": "audits/urmf_internal_dynamics_v1.json",
+      "bytes": 29871,
+      "sha256": "f45e1478b3e9a9d950888d5dceff402562adcad21e35cac711c8a3809e5fcabd"
+    },
+    {
+      "file": "urmf_inputanchored_counterfactual_v2.json",
+      "source_relative_to_urm_original": "audits/urmf_inputanchored_counterfactual_v2.json",
+      "bytes": 29818,
+      "sha256": "73da20c2a00d7c7fbe94f82f5309c1aa6172fe0558d2c2e40e6c5f90746d6a5d"
+    },
+    {
+      "file": "urmf_6vs8_step2405_30batches_v1.json",
+      "source_relative_to_urm_original": "audits/urmf_6vs8_step2405_30batches_v1.json",
+      "bytes": 266406,
+      "sha256": "6445f26145615fe02565c90980902dee2dd21481486e681e8767b690b5029411"
+    },
+    {
+      "file": "urmf_M_damping_a025_30b_v1.json",
+      "source_relative_to_urm_original": "audits/urmf_M_damping_a025_30b_v1.json",
+      "bytes": 225927,
+      "sha256": "b430b0d91f2acbce3d2ad934e65126447ab2a4e39083776899bf1ea86cf86a6c"
+    },
+    {
+      "file": "urmf_M_damping_a050_30b_v1.json",
+      "source_relative_to_urm_original": "audits/urmf_M_damping_a050_30b_v1.json",
+      "bytes": 226086,
+      "sha256": "5ee87a13b7daa71fc580a24528b81bb7d6f1402b9688923f8ebaffa9428630f2"
+    },
+    {
+      "file": "urmf_M_damping_a075_30b_v1.json",
+      "source_relative_to_urm_original": "audits/urmf_M_damping_a075_30b_v1.json",
+      "bytes": 225927,
+      "sha256": "9d78387d4dab0e24f9b203add8d694cf385bd3e516fdf0a31f574c7f1010f6e9"
+    },
+    {
+      "file": "urmf_M_damping_a100_30b_v1.json",
+      "source_relative_to_urm_original": "audits/urmf_M_damping_a100_30b_v1.json",
+      "bytes": 225756,
+      "sha256": "5ad12fcf123164e9bb04dd1ea0564dbff71e35fd3da683244283e250efaa789e"
+    },
+    {
+      "file": "urmf_damping_matched_a100_vs_a025_30b_v2.json",
+      "source_relative_to_urm_original": "audits/urmf_damping_matched_a100_vs_a025_30b_v2.json",
+      "bytes": 231429,
+      "sha256": "185f934093fa0758abce8d0ee970b98b150b72fb147b87ac09266e25b83651c0"
+    },
+    {
+      "file": "urmf_original_vs_damped_a025_step2405_30b_v2.json",
+      "source_relative_to_urm_original": "audits/urmf_original_vs_damped_a025_step2405_30b_v2.json",
+      "bytes": 231384,
+      "sha256": "23e25618a63a40741e157f7fa9fd77c8fb7c59643c454ca251b77152c601cfac"
+    },
+    {
+      "file": "urmf_original_vs_damped_a025_step4807_60ep_30b_v2.json",
+      "source_relative_to_urm_original": "audits/urmf_original_vs_damped_a025_step4807_60ep_30b_v2.json",
+      "bytes": 231628,
+      "sha256": "cbb74e18aeda84c0af449d5f01a518546a8bbcf48b36af4161f83ec3afe999ba"
+    }
+  ]
+}

@@ -1,0 +1,475 @@
+========================================
+SEED 1 - MODEL A
+========================================
+device: cuda
+max_steps=10000 (batch)  eval_every=500  N_SUP=4  init_seed=1  resume=False
+-> aggiornamenti totali effettivi per modello: 40000
+LR effettivi usati: A=2.5e-05  C=2.5e-05
+train_tasks=320  held_out_tasks=80
+
+============================================================
+LONG RUN CON DEEP SUPERVISION -- MODEL A  (lr=2.5e-05, N_SUP=4, init_seed=1)
+============================================================
+parametri: 7,535,712
+esempi di training: 1381
+[A seed=1] step   500/10000  avg_seg_loss=0.1079  held-out exact=0/80  real_acc=61.35%  correct_dims=49/80  elapsed=4.3 min
+[A seed=1] step  1000/10000  avg_seg_loss=0.1344  held-out exact=0/80  real_acc=61.07%  correct_dims=56/80  elapsed=8.7 min
+[A seed=1] step  1500/10000  avg_seg_loss=0.1752  held-out exact=0/80  real_acc=61.75%  correct_dims=55/80  elapsed=13.0 min
+[A seed=1] step  2000/10000  avg_seg_loss=0.0934  held-out exact=0/80  real_acc=72.46%  correct_dims=55/80  elapsed=17.3 min
+[A seed=1] step  2500/10000  avg_seg_loss=0.0368  held-out exact=0/80  real_acc=68.48%  correct_dims=56/80  elapsed=21.6 min
+[A seed=1] step  3000/10000  avg_seg_loss=0.1824  held-out exact=0/80  real_acc=71.15%  correct_dims=57/80  elapsed=26.0 min
+[A seed=1] step  3500/10000  avg_seg_loss=0.1568  held-out exact=0/80  real_acc=70.24%  correct_dims=57/80  elapsed=30.3 min
+[A seed=1] step  4000/10000  avg_seg_loss=0.1209  held-out exact=0/80  real_acc=70.65%  correct_dims=56/80  elapsed=34.6 min
+[A seed=1] step  4500/10000  avg_seg_loss=0.0420  held-out exact=0/80  real_acc=69.02%  correct_dims=57/80  elapsed=38.9 min
+[A seed=1] step  5000/10000  avg_seg_loss=0.0656  held-out exact=0/80  real_acc=74.01%  correct_dims=57/80  elapsed=43.3 min
+[A seed=1] step  5500/10000  avg_seg_loss=0.0578  held-out exact=0/80  real_acc=71.29%  correct_dims=59/80  elapsed=47.6 min
+[A seed=1] step  6000/10000  avg_seg_loss=0.1252  held-out exact=0/80  real_acc=76.92%  correct_dims=58/80  elapsed=51.9 min
+[A seed=1] step  6500/10000  avg_seg_loss=0.0889  held-out exact=0/80  real_acc=70.90%  correct_dims=60/80  elapsed=56.3 min
+[A seed=1] step  7000/10000  avg_seg_loss=0.0934  held-out exact=0/80  real_acc=73.04%  correct_dims=59/80  elapsed=60.6 min
+[A seed=1] step  7500/10000  avg_seg_loss=0.0897  held-out exact=0/80  real_acc=72.93%  correct_dims=57/80  elapsed=64.9 min
+[A seed=1] step  8000/10000  avg_seg_loss=0.1247  held-out exact=0/80  real_acc=76.49%  correct_dims=58/80  elapsed=69.2 min
+[A seed=1] step  8500/10000  avg_seg_loss=0.1087  held-out exact=0/80  real_acc=72.97%  correct_dims=58/80  elapsed=73.6 min
+[A seed=1] step  9000/10000  avg_seg_loss=0.2047  held-out exact=0/80  real_acc=71.16%  correct_dims=56/80  elapsed=77.9 min
+[A seed=1] step  9500/10000  avg_seg_loss=0.0958  held-out exact=1/80  real_acc=70.76%  correct_dims=56/80  elapsed=82.3 min
+[A seed=1] step 10000/10000  avg_seg_loss=0.0646  held-out exact=0/80  real_acc=76.43%  correct_dims=58/80  elapsed=86.6 min
+
+Curva di apprendimento -- MODEL A seed=1 (lr=2.5e-05, N_SUP=4):
+  step      exact  real_acc%  correct_dims
+   500    0/80        61.35      49/80
+  1000    0/80        61.07      56/80
+  1500    0/80        61.75      55/80
+  2000    0/80        72.46      55/80
+  2500    0/80        68.48      56/80
+  3000    0/80        71.15      57/80
+  3500    0/80        70.24      57/80
+  4000    0/80        70.65      56/80
+  4500    0/80        69.02      57/80
+  5000    0/80        74.01      57/80
+  5500    0/80        71.29      59/80
+  6000    0/80        76.92      58/80
+  6500    0/80        70.90      60/80
+  7000    0/80        73.04      59/80
+  7500    0/80        72.93      57/80
+  8000    0/80        76.49      58/80
+  8500    0/80        72.97      58/80
+  9000    0/80        71.16      56/80
+  9500    1/80        70.76      56/80
+ 10000    0/80        76.43      58/80
+
+Delta di real_acc tra eval successive: [-0.28, 0.67, 10.71, -3.98, 2.67, -0.9, 0.4, -1.63, 5.0, -2.73, 5.63, -6.02, 2.14, -0.11, 3.56, -3.52, -1.81, -0.4, 5.67]
+Media |delta| ultime 3 eval: 2.62 punti
+-> ANCORA IN MOVIMENTO: l'accuratezza continua a cambiare in modo
+   apprezzabile -- potrebbe servire ancora piu' budget.
+========================================
+SEED 1 - MODEL C
+========================================
+device: cuda
+max_steps=10000 (batch)  eval_every=500  N_SUP=4  init_seed=1  resume=False
+-> aggiornamenti totali effettivi per modello: 40000
+LR effettivi usati: A=2.5e-05  C=2.5e-05
+train_tasks=320  held_out_tasks=80
+
+============================================================
+LONG RUN CON DEEP SUPERVISION -- MODEL C  (lr=2.5e-05, N_SUP=4, init_seed=1)
+============================================================
+parametri: 7,535,712
+esempi di training: 1381
+[C seed=1] step   500/10000  avg_seg_loss=0.1735  held-out exact=0/80  real_acc=48.18%  correct_dims=52/80  elapsed=18.0 min
+[C seed=1] step  1000/10000  avg_seg_loss=0.1810  held-out exact=0/80  real_acc=49.43%  correct_dims=57/80  elapsed=35.9 min
+[C seed=1] step  1500/10000  avg_seg_loss=0.2324  held-out exact=0/80  real_acc=61.56%  correct_dims=58/80  elapsed=53.9 min
+[C seed=1] step  2000/10000  avg_seg_loss=0.0942  held-out exact=0/80  real_acc=62.23%  correct_dims=50/80  elapsed=71.9 min
+[C seed=1] step  2500/10000  avg_seg_loss=0.0423  held-out exact=0/80  real_acc=64.81%  correct_dims=59/80  elapsed=89.9 min
+[C seed=1] step  3000/10000  avg_seg_loss=0.1679  held-out exact=0/80  real_acc=69.87%  correct_dims=57/80  elapsed=107.9 min
+[C seed=1] step  3500/10000  avg_seg_loss=0.1525  held-out exact=0/80  real_acc=71.10%  correct_dims=54/80  elapsed=125.9 min
+[C seed=1] step  4000/10000  avg_seg_loss=0.1238  held-out exact=0/80  real_acc=70.35%  correct_dims=59/80  elapsed=143.9 min
+[C seed=1] step  4500/10000  avg_seg_loss=0.0472  held-out exact=0/80  real_acc=71.18%  correct_dims=59/80  elapsed=161.8 min
+[C seed=1] step  5000/10000  avg_seg_loss=0.0718  held-out exact=0/80  real_acc=74.30%  correct_dims=58/80  elapsed=179.8 min
+[C seed=1] step  5500/10000  avg_seg_loss=0.0621  held-out exact=0/80  real_acc=76.83%  correct_dims=56/80  elapsed=197.8 min
+[C seed=1] step  6000/10000  avg_seg_loss=0.1250  held-out exact=0/80  real_acc=70.86%  correct_dims=58/80  elapsed=215.8 min
+[C seed=1] step  6500/10000  avg_seg_loss=0.0878  held-out exact=0/80  real_acc=71.01%  correct_dims=56/80  elapsed=233.8 min
+[C seed=1] step  7000/10000  avg_seg_loss=0.0960  held-out exact=0/80  real_acc=72.98%  correct_dims=58/80  elapsed=251.8 min
+[C seed=1] step  7500/10000  avg_seg_loss=0.0987  held-out exact=0/80  real_acc=73.02%  correct_dims=55/80  elapsed=269.8 min
+[C seed=1] step  8000/10000  avg_seg_loss=0.1412  held-out exact=0/80  real_acc=71.76%  correct_dims=56/80  elapsed=287.7 min
+[C seed=1] step  8500/10000  avg_seg_loss=0.1003  held-out exact=0/80  real_acc=69.82%  correct_dims=56/80  elapsed=305.7 min
+[C seed=1] step  9000/10000  avg_seg_loss=0.1993  held-out exact=0/80  real_acc=73.06%  correct_dims=56/80  elapsed=323.7 min
+[C seed=1] step  9500/10000  avg_seg_loss=0.0939  held-out exact=1/80  real_acc=73.26%  correct_dims=56/80  elapsed=341.7 min
+[C seed=1] step 10000/10000  avg_seg_loss=0.0779  held-out exact=0/80  real_acc=74.80%  correct_dims=57/80  elapsed=359.6 min
+
+Curva di apprendimento -- MODEL C seed=1 (lr=2.5e-05, N_SUP=4):
+  step      exact  real_acc%  correct_dims
+   500    0/80        48.18      52/80
+  1000    0/80        49.43      57/80
+  1500    0/80        61.56      58/80
+  2000    0/80        62.23      50/80
+  2500    0/80        64.81      59/80
+  3000    0/80        69.87      57/80
+  3500    0/80        71.10      54/80
+  4000    0/80        70.35      59/80
+  4500    0/80        71.18      59/80
+  5000    0/80        74.30      58/80
+  5500    0/80        76.83      56/80
+  6000    0/80        70.86      58/80
+  6500    0/80        71.01      56/80
+  7000    0/80        72.98      58/80
+  7500    0/80        73.02      55/80
+  8000    0/80        71.76      56/80
+  8500    0/80        69.82      56/80
+  9000    0/80        73.06      56/80
+  9500    1/80        73.26      56/80
+ 10000    0/80        74.80      57/80
+
+Delta di real_acc tra eval successive: [1.25, 12.13, 0.67, 2.58, 5.06, 1.23, -0.75, 0.82, 3.12, 2.53, -5.97, 0.16, 1.97, 0.04, -1.26, -1.94, 3.24, 0.19, 1.55]
+Media |delta| ultime 3 eval: 1.66 punti
+-> ANCORA IN MOVIMENTO: l'accuratezza continua a cambiare in modo
+   apprezzabile -- potrebbe servire ancora piu' budget.
+========================================
+SEED 2 - MODEL A
+========================================
+device: cuda
+max_steps=10000 (batch)  eval_every=500  N_SUP=4  init_seed=2  resume=False
+-> aggiornamenti totali effettivi per modello: 40000
+LR effettivi usati: A=2.5e-05  C=2.5e-05
+train_tasks=320  held_out_tasks=80
+
+============================================================
+LONG RUN CON DEEP SUPERVISION -- MODEL A  (lr=2.5e-05, N_SUP=4, init_seed=2)
+============================================================
+parametri: 7,535,712
+esempi di training: 1381
+[A seed=2] step   500/10000  avg_seg_loss=0.3888  held-out exact=0/80  real_acc=67.00%  correct_dims=54/80  elapsed=4.3 min
+[A seed=2] step  1000/10000  avg_seg_loss=0.1270  held-out exact=0/80  real_acc=73.34%  correct_dims=55/80  elapsed=8.7 min
+[A seed=2] step  1500/10000  avg_seg_loss=0.0500  held-out exact=0/80  real_acc=66.73%  correct_dims=56/80  elapsed=13.0 min
+[A seed=2] step  2000/10000  avg_seg_loss=0.0745  held-out exact=0/80  real_acc=71.60%  correct_dims=53/80  elapsed=17.3 min
+[A seed=2] step  2500/10000  avg_seg_loss=0.0804  held-out exact=0/80  real_acc=73.87%  correct_dims=56/80  elapsed=21.7 min
+[A seed=2] step  3000/10000  avg_seg_loss=0.2938  held-out exact=0/80  real_acc=74.63%  correct_dims=58/80  elapsed=26.0 min
+[A seed=2] step  3500/10000  avg_seg_loss=0.0986  held-out exact=0/80  real_acc=73.41%  correct_dims=54/80  elapsed=30.4 min
+[A seed=2] step  4000/10000  avg_seg_loss=0.1614  held-out exact=0/80  real_acc=73.76%  correct_dims=57/80  elapsed=34.7 min
+[A seed=2] step  4500/10000  avg_seg_loss=0.1138  held-out exact=0/80  real_acc=75.24%  correct_dims=58/80  elapsed=39.0 min
+[A seed=2] step  5000/10000  avg_seg_loss=0.0576  held-out exact=0/80  real_acc=70.66%  correct_dims=55/80  elapsed=43.4 min
+[A seed=2] step  5500/10000  avg_seg_loss=0.0646  held-out exact=0/80  real_acc=69.87%  correct_dims=54/80  elapsed=47.7 min
+[A seed=2] step  6000/10000  avg_seg_loss=0.1881  held-out exact=0/80  real_acc=71.46%  correct_dims=55/80  elapsed=52.0 min
+[A seed=2] step  6500/10000  avg_seg_loss=0.1026  held-out exact=0/80  real_acc=74.06%  correct_dims=55/80  elapsed=56.3 min
+[A seed=2] step  7000/10000  avg_seg_loss=0.0773  held-out exact=0/80  real_acc=71.31%  correct_dims=54/80  elapsed=60.7 min
+[A seed=2] step  7500/10000  avg_seg_loss=0.1006  held-out exact=0/80  real_acc=74.16%  correct_dims=56/80  elapsed=65.0 min
+[A seed=2] step  8000/10000  avg_seg_loss=0.0837  held-out exact=0/80  real_acc=68.42%  correct_dims=58/80  elapsed=69.4 min
+[A seed=2] step  8500/10000  avg_seg_loss=0.0816  held-out exact=0/80  real_acc=68.63%  correct_dims=56/80  elapsed=73.7 min
+[A seed=2] step  9000/10000  avg_seg_loss=0.0704  held-out exact=0/80  real_acc=72.20%  correct_dims=55/80  elapsed=78.0 min
+[A seed=2] step  9500/10000  avg_seg_loss=0.1863  held-out exact=0/80  real_acc=68.53%  correct_dims=56/80  elapsed=82.4 min
+[A seed=2] step 10000/10000  avg_seg_loss=0.2428  held-out exact=0/80  real_acc=71.22%  correct_dims=60/80  elapsed=86.7 min
+
+Curva di apprendimento -- MODEL A seed=2 (lr=2.5e-05, N_SUP=4):
+  step      exact  real_acc%  correct_dims
+   500    0/80        67.00      54/80
+  1000    0/80        73.34      55/80
+  1500    0/80        66.73      56/80
+  2000    0/80        71.60      53/80
+  2500    0/80        73.87      56/80
+  3000    0/80        74.63      58/80
+  3500    0/80        73.41      54/80
+  4000    0/80        73.76      57/80
+  4500    0/80        75.24      58/80
+  5000    0/80        70.66      55/80
+  5500    0/80        69.87      54/80
+  6000    0/80        71.46      55/80
+  6500    0/80        74.06      55/80
+  7000    0/80        71.31      54/80
+  7500    0/80        74.16      56/80
+  8000    0/80        68.42      58/80
+  8500    0/80        68.63      56/80
+  9000    0/80        72.20      55/80
+  9500    0/80        68.53      56/80
+ 10000    0/80        71.22      60/80
+
+Delta di real_acc tra eval successive: [6.34, -6.61, 4.87, 2.27, 0.75, -1.21, 0.35, 1.48, -4.58, -0.8, 1.59, 2.6, -2.75, 2.85, -5.74, 0.21, 3.56, -3.67, 2.7]
+Media |delta| ultime 3 eval: 3.31 punti
+-> ANCORA IN MOVIMENTO: l'accuratezza continua a cambiare in modo
+   apprezzabile -- potrebbe servire ancora piu' budget.
+========================================
+SEED 2 - MODEL C
+========================================
+device: cuda
+max_steps=10000 (batch)  eval_every=500  N_SUP=4  init_seed=2  resume=False
+-> aggiornamenti totali effettivi per modello: 40000
+LR effettivi usati: A=2.5e-05  C=2.5e-05
+train_tasks=320  held_out_tasks=80
+
+============================================================
+LONG RUN CON DEEP SUPERVISION -- MODEL C  (lr=2.5e-05, N_SUP=4, init_seed=2)
+============================================================
+parametri: 7,535,712
+esempi di training: 1381
+[C seed=2] step   500/10000  avg_seg_loss=0.4644  held-out exact=0/80  real_acc=47.59%  correct_dims=51/80  elapsed=18.0 min
+[C seed=2] step  1000/10000  avg_seg_loss=0.2380  held-out exact=0/80  real_acc=44.06%  correct_dims=52/80  elapsed=36.0 min
+[C seed=2] step  1500/10000  avg_seg_loss=0.0525  held-out exact=0/80  real_acc=55.07%  correct_dims=47/80  elapsed=54.0 min
+[C seed=2] step  2000/10000  avg_seg_loss=0.0769  held-out exact=0/80  real_acc=64.76%  correct_dims=55/80  elapsed=72.0 min
+[C seed=2] step  2500/10000  avg_seg_loss=0.0820  held-out exact=0/80  real_acc=69.12%  correct_dims=55/80  elapsed=90.0 min
+[C seed=2] step  3000/10000  avg_seg_loss=0.3517  held-out exact=0/80  real_acc=68.27%  correct_dims=57/80  elapsed=108.0 min
+[C seed=2] step  3500/10000  avg_seg_loss=0.1207  held-out exact=0/80  real_acc=67.39%  correct_dims=54/80  elapsed=126.0 min
+[C seed=2] step  4000/10000  avg_seg_loss=0.2011  held-out exact=0/80  real_acc=68.92%  correct_dims=57/80  elapsed=144.0 min
+[C seed=2] step  4500/10000  avg_seg_loss=0.1115  held-out exact=0/80  real_acc=61.44%  correct_dims=56/80  elapsed=162.0 min
+[C seed=2] step  5000/10000  avg_seg_loss=0.0645  held-out exact=0/80  real_acc=71.40%  correct_dims=50/80  elapsed=179.9 min
+[C seed=2] step  5500/10000  avg_seg_loss=0.0653  held-out exact=0/80  real_acc=69.18%  correct_dims=58/80  elapsed=197.9 min
+[C seed=2] step  6000/10000  avg_seg_loss=0.1661  held-out exact=0/80  real_acc=72.68%  correct_dims=56/80  elapsed=215.9 min
+[C seed=2] step  6500/10000  avg_seg_loss=0.1025  held-out exact=0/80  real_acc=72.28%  correct_dims=57/80  elapsed=233.9 min
+[C seed=2] step  7000/10000  avg_seg_loss=0.0761  held-out exact=0/80  real_acc=73.85%  correct_dims=59/80  elapsed=251.9 min
+[C seed=2] step  7500/10000  avg_seg_loss=0.1117  held-out exact=0/80  real_acc=70.69%  correct_dims=58/80  elapsed=269.8 min
+[C seed=2] step  8000/10000  avg_seg_loss=0.0704  held-out exact=0/80  real_acc=68.80%  correct_dims=57/80  elapsed=287.8 min
+[C seed=2] step  8500/10000  avg_seg_loss=0.0848  held-out exact=0/80  real_acc=68.55%  correct_dims=56/80  elapsed=305.8 min
+[C seed=2] step  9000/10000  avg_seg_loss=0.0981  held-out exact=0/80  real_acc=61.19%  correct_dims=51/80  elapsed=323.8 min
+[C seed=2] step  9500/10000  avg_seg_loss=0.2287  held-out exact=0/80  real_acc=64.45%  correct_dims=54/80  elapsed=341.8 min
+[C seed=2] step 10000/10000  avg_seg_loss=0.2585  held-out exact=0/80  real_acc=64.39%  correct_dims=61/80  elapsed=359.7 min
+
+Curva di apprendimento -- MODEL C seed=2 (lr=2.5e-05, N_SUP=4):
+  step      exact  real_acc%  correct_dims
+   500    0/80        47.59      51/80
+  1000    0/80        44.06      52/80
+  1500    0/80        55.07      47/80
+  2000    0/80        64.76      55/80
+  2500    0/80        69.12      55/80
+  3000    0/80        68.27      57/80
+  3500    0/80        67.39      54/80
+  4000    0/80        68.92      57/80
+  4500    0/80        61.44      56/80
+  5000    0/80        71.40      50/80
+  5500    0/80        69.18      58/80
+  6000    0/80        72.68      56/80
+  6500    0/80        72.28      57/80
+  7000    0/80        73.85      59/80
+  7500    0/80        70.69      58/80
+  8000    0/80        68.80      57/80
+  8500    0/80        68.55      56/80
+  9000    0/80        61.19      51/80
+  9500    0/80        64.45      54/80
+ 10000    0/80        64.39      61/80
+
+Delta di real_acc tra eval successive: [-3.53, 11.0, 9.69, 4.37, -0.85, -0.88, 1.53, -7.48, 9.96, -2.22, 3.5, -0.4, 1.57, -3.16, -1.9, -0.25, -7.36, 3.26, -0.06]
+Media |delta| ultime 3 eval: 3.56 punti
+-> ANCORA IN MOVIMENTO: l'accuratezza continua a cambiare in modo
+   apprezzabile -- potrebbe servire ancora piu' budget.
+========================================
+SEED 3 - MODEL A
+========================================
+device: cuda
+max_steps=10000 (batch)  eval_every=500  N_SUP=4  init_seed=3  resume=False
+-> aggiornamenti totali effettivi per modello: 40000
+LR effettivi usati: A=2.5e-05  C=2.5e-05
+train_tasks=320  held_out_tasks=80
+
+============================================================
+LONG RUN CON DEEP SUPERVISION -- MODEL A  (lr=2.5e-05, N_SUP=4, init_seed=3)
+============================================================
+parametri: 7,535,712
+esempi di training: 1381
+[A seed=3] step   500/10000  avg_seg_loss=0.1228  held-out exact=0/80  real_acc=63.10%  correct_dims=52/80  elapsed=4.3 min
+[A seed=3] step  1000/10000  avg_seg_loss=0.1538  held-out exact=0/80  real_acc=71.25%  correct_dims=54/80  elapsed=8.7 min
+[A seed=3] step  1500/10000  avg_seg_loss=0.1361  held-out exact=0/80  real_acc=71.75%  correct_dims=57/80  elapsed=13.0 min
+[A seed=3] step  2000/10000  avg_seg_loss=0.1263  held-out exact=0/80  real_acc=73.95%  correct_dims=54/80  elapsed=17.3 min
+[A seed=3] step  2500/10000  avg_seg_loss=0.0939  held-out exact=0/80  real_acc=69.13%  correct_dims=53/80  elapsed=21.6 min
+[A seed=3] step  3000/10000  avg_seg_loss=0.1469  held-out exact=0/80  real_acc=71.71%  correct_dims=54/80  elapsed=26.0 min
+[A seed=3] step  3500/10000  avg_seg_loss=0.4034  held-out exact=0/80  real_acc=70.87%  correct_dims=56/80  elapsed=30.3 min
+[A seed=3] step  4000/10000  avg_seg_loss=0.0713  held-out exact=0/80  real_acc=74.68%  correct_dims=58/80  elapsed=34.6 min
+[A seed=3] step  4500/10000  avg_seg_loss=0.0655  held-out exact=0/80  real_acc=74.33%  correct_dims=57/80  elapsed=38.9 min
+[A seed=3] step  5000/10000  avg_seg_loss=0.0927  held-out exact=0/80  real_acc=66.79%  correct_dims=56/80  elapsed=43.3 min
+[A seed=3] step  5500/10000  avg_seg_loss=0.0458  held-out exact=0/80  real_acc=76.68%  correct_dims=54/80  elapsed=47.6 min
+[A seed=3] step  6000/10000  avg_seg_loss=0.0765  held-out exact=0/80  real_acc=71.64%  correct_dims=58/80  elapsed=51.9 min
+[A seed=3] step  6500/10000  avg_seg_loss=0.0628  held-out exact=0/80  real_acc=71.46%  correct_dims=58/80  elapsed=56.2 min
+[A seed=3] step  7000/10000  avg_seg_loss=0.0543  held-out exact=0/80  real_acc=68.50%  correct_dims=56/80  elapsed=60.6 min
+[A seed=3] step  7500/10000  avg_seg_loss=0.0670  held-out exact=0/80  real_acc=65.49%  correct_dims=56/80  elapsed=64.9 min
+[A seed=3] step  8000/10000  avg_seg_loss=0.0777  held-out exact=0/80  real_acc=72.20%  correct_dims=56/80  elapsed=69.2 min
+[A seed=3] step  8500/10000  avg_seg_loss=0.0626  held-out exact=0/80  real_acc=71.52%  correct_dims=59/80  elapsed=73.5 min
+[A seed=3] step  9000/10000  avg_seg_loss=0.0509  held-out exact=0/80  real_acc=68.08%  correct_dims=59/80  elapsed=77.9 min
+[A seed=3] step  9500/10000  avg_seg_loss=0.0638  held-out exact=0/80  real_acc=69.35%  correct_dims=56/80  elapsed=82.2 min
+[A seed=3] step 10000/10000  avg_seg_loss=0.1135  held-out exact=0/80  real_acc=74.01%  correct_dims=58/80  elapsed=86.5 min
+
+Curva di apprendimento -- MODEL A seed=3 (lr=2.5e-05, N_SUP=4):
+  step      exact  real_acc%  correct_dims
+   500    0/80        63.10      52/80
+  1000    0/80        71.25      54/80
+  1500    0/80        71.75      57/80
+  2000    0/80        73.95      54/80
+  2500    0/80        69.13      53/80
+  3000    0/80        71.71      54/80
+  3500    0/80        70.87      56/80
+  4000    0/80        74.68      58/80
+  4500    0/80        74.33      57/80
+  5000    0/80        66.79      56/80
+  5500    0/80        76.68      54/80
+  6000    0/80        71.64      58/80
+  6500    0/80        71.46      58/80
+  7000    0/80        68.50      56/80
+  7500    0/80        65.49      56/80
+  8000    0/80        72.20      56/80
+  8500    0/80        71.52      59/80
+  9000    0/80        68.08      59/80
+  9500    0/80        69.35      56/80
+ 10000    0/80        74.01      58/80
+
+Delta di real_acc tra eval successive: [8.14, 0.5, 2.2, -4.82, 2.58, -0.84, 3.81, -0.35, -7.53, 9.89, -5.04, -0.18, -2.96, -3.01, 6.71, -0.68, -3.44, 1.27, 4.66]
+Media |delta| ultime 3 eval: 3.12 punti
+-> ANCORA IN MOVIMENTO: l'accuratezza continua a cambiare in modo
+   apprezzabile -- potrebbe servire ancora piu' budget.
+========================================
+SEED 3 - MODEL C
+========================================
+device: cuda
+max_steps=10000 (batch)  eval_every=500  N_SUP=4  init_seed=3  resume=False
+-> aggiornamenti totali effettivi per modello: 40000
+LR effettivi usati: A=2.5e-05  C=2.5e-05
+train_tasks=320  held_out_tasks=80
+
+============================================================
+LONG RUN CON DEEP SUPERVISION -- MODEL C  (lr=2.5e-05, N_SUP=4, init_seed=3)
+============================================================
+parametri: 7,535,712
+esempi di training: 1381
+[C seed=3] step   500/10000  avg_seg_loss=0.1442  held-out exact=0/80  real_acc=41.63%  correct_dims=54/80  elapsed=18.0 min
+[C seed=3] step  1000/10000  avg_seg_loss=0.1794  held-out exact=0/80  real_acc=48.82%  correct_dims=51/80  elapsed=36.0 min
+[C seed=3] step  1500/10000  avg_seg_loss=0.1534  held-out exact=0/80  real_acc=54.31%  correct_dims=52/80  elapsed=53.9 min
+[C seed=3] step  2000/10000  avg_seg_loss=0.1353  held-out exact=0/80  real_acc=59.72%  correct_dims=49/80  elapsed=71.9 min
+[C seed=3] step  2500/10000  avg_seg_loss=0.0945  held-out exact=0/80  real_acc=63.86%  correct_dims=52/80  elapsed=89.9 min
+[C seed=3] step  3000/10000  avg_seg_loss=0.1615  held-out exact=0/80  real_acc=70.01%  correct_dims=53/80  elapsed=107.9 min
+[C seed=3] step  3500/10000  avg_seg_loss=0.4155  held-out exact=0/80  real_acc=60.39%  correct_dims=52/80  elapsed=125.9 min
+[C seed=3] step  4000/10000  avg_seg_loss=0.0796  held-out exact=0/80  real_acc=72.15%  correct_dims=53/80  elapsed=143.9 min
+[C seed=3] step  4500/10000  avg_seg_loss=0.0703  held-out exact=0/80  real_acc=64.91%  correct_dims=55/80  elapsed=161.9 min
+[C seed=3] step  5000/10000  avg_seg_loss=0.1080  held-out exact=0/80  real_acc=67.99%  correct_dims=52/80  elapsed=179.8 min
+[C seed=3] step  5500/10000  avg_seg_loss=0.0490  held-out exact=0/80  real_acc=69.27%  correct_dims=51/80  elapsed=197.8 min
+[C seed=3] step  6000/10000  avg_seg_loss=0.0948  held-out exact=0/80  real_acc=66.12%  correct_dims=50/80  elapsed=215.8 min
+[C seed=3] step  6500/10000  avg_seg_loss=0.0646  held-out exact=0/80  real_acc=68.42%  correct_dims=54/80  elapsed=233.8 min
+[C seed=3] step  7000/10000  avg_seg_loss=0.0601  held-out exact=0/80  real_acc=67.88%  correct_dims=57/80  elapsed=251.9 min
+[C seed=3] step  7500/10000  avg_seg_loss=0.0673  held-out exact=0/80  real_acc=72.65%  correct_dims=59/80  elapsed=270.3 min
+[C seed=3] step  8000/10000  avg_seg_loss=0.0846  held-out exact=0/80  real_acc=73.04%  correct_dims=56/80  elapsed=288.4 min
+[C seed=3] step  8500/10000  avg_seg_loss=0.0570  held-out exact=0/80  real_acc=73.74%  correct_dims=58/80  elapsed=306.9 min
+[C seed=3] step  9000/10000  avg_seg_loss=0.0612  held-out exact=0/80  real_acc=74.96%  correct_dims=54/80  elapsed=325.1 min
+[C seed=3] step  9500/10000  avg_seg_loss=0.0689  held-out exact=0/80  real_acc=73.48%  correct_dims=55/80  elapsed=343.7 min
+[C seed=3] step 10000/10000  avg_seg_loss=0.1176  held-out exact=0/80  real_acc=75.00%  correct_dims=56/80  elapsed=361.7 min
+
+Curva di apprendimento -- MODEL C seed=3 (lr=2.5e-05, N_SUP=4):
+  step      exact  real_acc%  correct_dims
+   500    0/80        41.63      54/80
+  1000    0/80        48.82      51/80
+  1500    0/80        54.31      52/80
+  2000    0/80        59.72      49/80
+  2500    0/80        63.86      52/80
+  3000    0/80        70.01      53/80
+  3500    0/80        60.39      52/80
+  4000    0/80        72.15      53/80
+  4500    0/80        64.91      55/80
+  5000    0/80        67.99      52/80
+  5500    0/80        69.27      51/80
+  6000    0/80        66.12      50/80
+  6500    0/80        68.42      54/80
+  7000    0/80        67.88      57/80
+  7500    0/80        72.65      59/80
+  8000    0/80        73.04      56/80
+  8500    0/80        73.74      58/80
+  9000    0/80        74.96      54/80
+  9500    0/80        73.48      55/80
+ 10000    0/80        75.00      56/80
+
+Delta di real_acc tra eval successive: [7.18, 5.5, 5.4, 4.15, 6.15, -9.62, 11.76, -7.24, 3.07, 1.28, -3.15, 2.3, -0.54, 4.77, 0.38, 0.7, 1.22, -1.48, 1.53]
+Media |delta| ultime 3 eval: 1.41 punti
+-> ANCORA IN MOVIMENTO: l'accuratezza continua a cambiare in modo
+   apprezzabile -- potrebbe servire ancora piu' budget.
+========================================
+SEED 4 - MODEL A
+========================================
+device: cuda
+max_steps=10000 (batch)  eval_every=500  N_SUP=4  init_seed=4  resume=False
+-> aggiornamenti totali effettivi per modello: 40000
+LR effettivi usati: A=2.5e-05  C=2.5e-05
+train_tasks=320  held_out_tasks=80
+
+============================================================
+LONG RUN CON DEEP SUPERVISION -- MODEL A  (lr=2.5e-05, N_SUP=4, init_seed=4)
+============================================================
+parametri: 7,535,712
+esempi di training: 1381
+[A seed=4] step   500/10000  avg_seg_loss=0.1147  held-out exact=0/80  real_acc=57.78%  correct_dims=54/80  elapsed=4.4 min
+[A seed=4] step  1000/10000  avg_seg_loss=0.4683  held-out exact=0/80  real_acc=68.66%  correct_dims=55/80  elapsed=8.7 min
+[A seed=4] step  1500/10000  avg_seg_loss=0.0610  held-out exact=0/80  real_acc=60.74%  correct_dims=54/80  elapsed=13.1 min
+[A seed=4] step  2000/10000  avg_seg_loss=0.0726  held-out exact=0/80  real_acc=67.65%  correct_dims=54/80  elapsed=17.4 min
+[A seed=4] step  2500/10000  avg_seg_loss=0.2776  held-out exact=0/80  real_acc=74.77%  correct_dims=57/80  elapsed=21.8 min
+[A seed=4] step  3000/10000  avg_seg_loss=0.0926  held-out exact=0/80  real_acc=71.87%  correct_dims=56/80  elapsed=26.1 min
+[A seed=4] step  3500/10000  avg_seg_loss=0.1003  held-out exact=0/80  real_acc=75.46%  correct_dims=54/80  elapsed=30.5 min
+[A seed=4] step  4000/10000  avg_seg_loss=0.0880  held-out exact=0/80  real_acc=72.84%  correct_dims=56/80  elapsed=34.8 min
+[A seed=4] step  4500/10000  avg_seg_loss=0.1310  held-out exact=0/80  real_acc=77.42%  correct_dims=57/80  elapsed=39.2 min
+[A seed=4] step  5000/10000  avg_seg_loss=0.0437  held-out exact=0/80  real_acc=76.86%  correct_dims=56/80  elapsed=43.5 min
+[A seed=4] step  5500/10000  avg_seg_loss=0.0798  held-out exact=0/80  real_acc=77.25%  correct_dims=57/80  elapsed=47.9 min
+[A seed=4] step  6000/10000  avg_seg_loss=0.2259  held-out exact=0/80  real_acc=77.90%  correct_dims=56/80  elapsed=52.2 min
+[A seed=4] step  6500/10000  avg_seg_loss=0.1375  held-out exact=0/80  real_acc=73.50%  correct_dims=56/80  elapsed=56.6 min
+[A seed=4] step  7000/10000  avg_seg_loss=0.0752  held-out exact=0/80  real_acc=77.74%  correct_dims=56/80  elapsed=61.0 min
+[A seed=4] step  7500/10000  avg_seg_loss=0.1231  held-out exact=0/80  real_acc=78.19%  correct_dims=57/80  elapsed=65.3 min
+[A seed=4] step  8000/10000  avg_seg_loss=0.0775  held-out exact=0/80  real_acc=76.86%  correct_dims=58/80  elapsed=69.7 min
+[A seed=4] step  8500/10000  avg_seg_loss=0.0440  held-out exact=0/80  real_acc=77.51%  correct_dims=59/80  elapsed=74.0 min
+[A seed=4] step  9000/10000  avg_seg_loss=0.1605  held-out exact=0/80  real_acc=74.16%  correct_dims=55/80  elapsed=78.4 min
+[A seed=4] step  9500/10000  avg_seg_loss=0.0595  held-out exact=0/80  real_acc=74.84%  correct_dims=56/80  elapsed=82.7 min
+[A seed=4] step 10000/10000  avg_seg_loss=0.1106  held-out exact=0/80  real_acc=70.68%  correct_dims=56/80  elapsed=87.1 min
+
+Curva di apprendimento -- MODEL A seed=4 (lr=2.5e-05, N_SUP=4):
+  step      exact  real_acc%  correct_dims
+   500    0/80        57.78      54/80
+  1000    0/80        68.66      55/80
+  1500    0/80        60.74      54/80
+  2000    0/80        67.65      54/80
+  2500    0/80        74.77      57/80
+  3000    0/80        71.87      56/80
+  3500    0/80        75.46      54/80
+  4000    0/80        72.84      56/80
+  4500    0/80        77.42      57/80
+  5000    0/80        76.86      56/80
+  5500    0/80        77.25      57/80
+  6000    0/80        77.90      56/80
+  6500    0/80        73.50      56/80
+  7000    0/80        77.74      56/80
+  7500    0/80        78.19      57/80
+  8000    0/80        76.86      58/80
+  8500    0/80        77.51      59/80
+  9000    0/80        74.16      55/80
+  9500    0/80        74.84      56/80
+ 10000    0/80        70.68      56/80
+
+Delta di real_acc tra eval successive: [10.88, -7.92, 6.91, 7.12, -2.9, 3.59, -2.63, 4.59, -0.56, 0.38, 0.65, -4.4, 4.24, 0.45, -1.33, 0.65, -3.34, 0.67, -4.16]
+Media |delta| ultime 3 eval: 2.73 punti
+-> ANCORA IN MOVIMENTO: l'accuratezza continua a cambiare in modo
+   apprezzabile -- potrebbe servire ancora piu' budget.
+========================================
+SEED 4 - MODEL C
+========================================
+device: cuda
+max_steps=10000 (batch)  eval_every=500  N_SUP=4  init_seed=4  resume=False
+-> aggiornamenti totali effettivi per modello: 40000
+LR effettivi usati: A=2.5e-05  C=2.5e-05
+train_tasks=320  held_out_tasks=80
+
+============================================================
+LONG RUN CON DEEP SUPERVISION -- MODEL C  (lr=2.5e-05, N_SUP=4, init_seed=4)
+============================================================
+parametri: 7,535,712
+esempi di training: 1381
+[C seed=4] step   500/10000  avg_seg_loss=0.1997  held-out exact=0/80  real_acc=36.81%  correct_dims=53/80  elapsed=18.0 min
+[C seed=4] step  1000/10000  avg_seg_loss=0.1239  held-out exact=0/80  real_acc=43.65%  correct_dims=50/80  elapsed=36.0 min
+[C seed=4] step  1500/10000  avg_seg_loss=0.0721  held-out exact=0/80  real_acc=50.89%  correct_dims=50/80  elapsed=54.1 min
+Traceback (most recent call last):
+  File "/home/sneri/thesis_env/lib/python3.12/site-packages/torch/serialization.py", line 850, in save
+    _save(
+  File "/home/sneri/thesis_env/lib/python3.12/site-packages/torch/serialization.py", line 1114, in _save
+    zip_file.write_record(name, storage, num_bytes)
+RuntimeError: [enforce fail at inline_container.cc:778] . PytorchStreamWriter failed writing file data/19: file write failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sneri/fractal_hrm/scripts/hrmf_v3_clean_matched_v1.py", line 426, in <module>
+    main()
+  File "/home/sneri/fractal_hrm/scripts/hrmf_v3_clean_matched_v1.py", line 413, in main
+    curves["C"] = run_long("C", lr_c, args.n_sup, args.init_seed, train_dict, val_dict,
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sneri/fractal_hrm/scripts/hrmf_v3_clean_matched_v1.py", line 348, in run_long
+    save_checkpoint(model, optimizer, step, curve, model_type, init_seed)
+  File "/home/sneri/fractal_hrm/scripts/hrmf_v3_clean_matched_v1.py", line 248, in save_checkpoint
+    torch.save({
+  File "/home/sneri/thesis_env/lib/python3.12/site-packages/torch/serialization.py", line 849, in save
+    with _open_zipfile_writer(f) as opened_zipfile:
+  File "/home/sneri/thesis_env/lib/python3.12/site-packages/torch/serialization.py", line 690, in __exit__
+    self.file_like.write_end_of_file()
+RuntimeError: [enforce fail at inline_container.cc:603] . unexpected pos 45836608 vs 45836496
