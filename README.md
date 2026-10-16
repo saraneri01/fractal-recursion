@@ -245,7 +245,7 @@ setting (`hrm_official/`, `trm_official/`, `urm_official/`,
 - For the 120-epoch and damped runs, only the sequence-level metrics in
   `results/urm_official/` (token accuracy, loss and augmented-sequence exact
   accuracy) are used in the paper.
-- - Only the final rapid HRM series is included; the preliminary rapid HRM
+- Only the final rapid HRM series is included; the preliminary rapid HRM
   experiments mentioned in Appendix A are not packaged.
 - Absolute paths in logs and provenance files refer to the original
   experiment machine.
