@@ -1,7 +1,7 @@
 # Nested Shared-Operator Recursion on ARC-AGI-1
 
 Code for the experiments in *Nested Shared-Operator Recursion on ARC-AGI-1:
-An Empirical Study of HRM, TRM and URM* (preprint forthcoming).
+An Empirical Study of HRM, TRM and URM*.
 
 The repository compares baseline and nested configurations of the
 Hierarchical Reasoning Model (HRM), Tiny Recursive Model (TRM) and Universal
@@ -141,9 +141,9 @@ python -m train.rapid_hrm --model C --init_seed <SEED> --max_steps 10000 --eval_
 ```
 
 Four supervised segments give four optimiser updates per outer step. The
-recorded baseline (model A) run for seed 0 was produced with an earlier entry
-point; its provenance is documented in `results/rapid_hrm_final/`, and the
-command above has not been verified to reproduce that run exactly.
+recorded baseline (model A) run for seed 0 was produced with an earlier
+version of this entry point; its provenance is documented in
+`results/rapid_hrm_final/`.
 
 **Rapid TRM** (paper, Appendix A), training and evaluation in one run:
 
