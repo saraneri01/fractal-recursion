@@ -262,8 +262,6 @@ This repository adapts code from the following projects:
 
 Files derived from these projects were modified for the experiments reported
 in the paper; the listed commits identify the upstream checkouts.
-URM-derived code is included for research reproducibility, with attribution
-to its authors, and will be updated or removed at their request.
 
 Original code in this repository is released under the Apache License 2.0
 (see `LICENSE`).
