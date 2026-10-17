@@ -1,0 +1,55 @@
+arch:
+  value:
+    H_cycles: 2
+    H_layers: 4
+    L_cycles: 2
+    L_layers: 4
+    N_inner: 2
+    T_inner: 2
+    expansion: 4
+    halt_exploration_prob: 0.1
+    halt_max_steps: 16
+    hidden_size: 512
+    loss:
+      loss_type: stablemax_cross_entropy
+      name: losses@ACTLossHead
+    name: hrm.hrm_act_v1_fractal_official_v1@HierarchicalReasoningModel_ACTV1
+    num_heads: 8
+    pos_encodings: rope
+    puzzle_emb_ndim: 512
+beta1:
+  value: 0.9
+beta2:
+  value: 0.95
+checkpoint_every_eval:
+  value: true
+checkpoint_path:
+  value: checkpoints/Arc-aug-1000 ACT-torch/HierarchicalReasoningModel_ACTV1 phenomenal-frog
+data_path:
+  value: /home/sneri/arc_thesis/models/HRM/data/arc-aug-1000
+epochs:
+  value: 61
+eval_interval:
+  value: 61
+eval_save_outputs:
+  value: []
+global_batch_size:
+  value: 48
+lr:
+  value: 0.0001
+lr_min_ratio:
+  value: 1
+lr_warmup_steps:
+  value: 2000
+project_name:
+  value: Arc-aug-1000 ACT-torch
+puzzle_emb_lr:
+  value: 0.01
+puzzle_emb_weight_decay:
+  value: 0.1
+run_name:
+  value: HierarchicalReasoningModel_ACTV1 phenomenal-frog
+seed:
+  value: 0
+weight_decay:
+  value: 0.1

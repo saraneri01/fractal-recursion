@@ -239,6 +239,10 @@ setting (`hrm_official/`, `trm_official/`, `urm_official/`,
   (metrics, effective configuration and source hashes) and the ARC submission
   in `evaluator_ARC_step_4807/`. Saved predictions and checkpoints are not
   included because of their size.
+- HRM: `results/hrm_official/wandb_summaries/` contains, for the runs whose
+  evaluation metrics were recorded during training, the W&B summary and the
+  run configuration; `results/hrm_official/original_task_scores/` contains the
+  task-level scores at k for the seed-0 baseline and C2 checkpoints.
 - ARC/pass@k is the mean over tasks of the fraction of test queries whose
   expected output is among the first k distinct ranked candidates; it differs
   from the fraction of entirely solved tasks.

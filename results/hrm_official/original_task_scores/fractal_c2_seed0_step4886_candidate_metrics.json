@@ -1,0 +1,22 @@
+{
+  "checkpoint": "checkpoints/Arc-aug-1000 ACT-torch/HierarchicalReasoningModel_ACTV1 HRMF_C2_fullmacrograd_seed0_v1/step_4886",
+  "dataset": "/home/sneri/arc_thesis/models/HRM/data/arc-aug-1000",
+  "n_tasks": 400,
+  "n_pairs": 419,
+  "correct_pairs_at_k": {
+    "1": 0,
+    "2": 0,
+    "10": 1,
+    "100": 1,
+    "1000": 2
+  },
+  "solved_tasks_at_k": {
+    "1": 0,
+    "2": 0,
+    "10": 0,
+    "100": 0,
+    "1000": 1
+  },
+  "oracle_correct_pairs": 2,
+  "oracle_solved_tasks": 1
+}
