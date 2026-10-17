@@ -1,0 +1,41 @@
+{
+  "complete": true,
+  "checkpoint_step": 9614,
+  "data_path": "/home/sneri/arc_thesis/models/URM_official/data/arc-aug-1000-thesis-eval-v1",
+  "expected_sequences": 385814,
+  "sequences": 385814,
+  "exact_sequences": 33,
+  "batches": 8038,
+  "effective_config": "PretrainConfig(arch=ArchConfig(name='urm.urm_fractal_official_v1@URM', loss=LossConfig(name='losses@ACTLossHead', loss_type='stablemax_cross_entropy'), loops=16, num_layers=4, hidden_size=512, num_heads=8, expansion=4, H_cycles=2, L_cycles=6, loop_deltas=[0, 8], puzzle_emb_ndim=512, pos_encodings='rope', profile=True, eval_interval=1000, checkpoint_every_eval=True, checkpoint_path='/volume/ylchen/code/loop_arcagi/checkpoints/v22_debug', ema=True, ema_rate=0.999, M_cycles=2, L_cycles_inner=2), data_path='/home/sneri/arc_thesis/models/URM_official/data/arc-aug-1000-thesis-eval-v1', evaluators=[EvaluatorConfig(name='arc_single_gpu_v1@ARC')], global_batch_size=48, epochs=120, lr=0.0001, lr_min_ratio=1.0, lr_warmup_steps=2000, weight_decay=0.1, beta1=0.9, beta2=0.95, target_q_update_every=4, puzzle_emb_lr=0.01, puzzle_emb_weight_decay=0.1, grad_accum_steps=1, project_name='arcagi', run_name='URMF_arc1_seed0_120ep_v1', checkpoint_path='/home/sneri/arc_thesis/models/URM_official/evaluations/URMF_step9614_decoder_fixed_20261017_111955_838985', load_checkpoint='/home/sneri/arc_thesis/models/URM_official/checkpoints/URMF_arc1_seed0_120ep_v1/step_9614.pt', load_strict=True, load_optimizer_state=False, seed=0, checkpoint_every_eval=False, eval_interval=15, eval_save_outputs=[], loop_deltas=[0], ema=False, ema_rate=0.999, use_muon=False)",
+  "source_sha256": {
+    "pretrain_thesis_v2.py": "ad567389d104d73f5c8c53f0980031b2c66c626b217203d7e10beaccf05eaa9e",
+    "models/losses.py": "dfaa444c415b0cb0e83fc23e09de9cea851eebdee8f48ea759bf203a53193352",
+    "data/build_arc_dataset.py": "6aac775664ad8f659b26861faae64588ba06161b067355fd8a5fbce7be35c58b",
+    "data/common.py": "035a735e412efe3359880f0618482df382998dafcb1bdc575f84e472f185b81f",
+    "evaluators/arc_single_gpu_v1.py": "bfdf72d08d26ff069d0eb1942d0c14613c3a8a966c170461bc4e0ee19e611eda",
+    "models/urm/urm_fractal_official_v1.py": "743adf1e00cd6f7ae02ba12801baa280d51f87ba93e80b749c4a8512c353cff9"
+  },
+  "elapsed_seconds": 22697.106997963987,
+  "estimated_remaining_hours": 0.029532495748309167,
+  "metrics": {
+    "all": {
+      "accuracy": 0.6279661059379578,
+      "exact_accuracy": 8.553344378015026e-05,
+      "lm_loss": 1.2856746912002563,
+      "q_halt_accuracy": 0.9989657998085022,
+      "q_halt_loss": 0.005484587978571653,
+      "steps": 16.0
+    },
+    "ARC/pass@1": 0.0,
+    "ARC/pass@2": 0.0,
+    "ARC/pass@5": 0.00125,
+    "ARC/pass@10": 0.00375,
+    "ARC/pass@100": 0.00625,
+    "ARC/pass@1000": 0.00625,
+    "ARC/maj@10": 0.00125,
+    "ARC/maj@100": 0.0,
+    "ARC/maj@1000": 0.0,
+    "ARC/maj@10000": 0.0
+  },
+  "independent_exact_fraction": 8.55334435764384e-05
+}

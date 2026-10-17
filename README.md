@@ -199,6 +199,8 @@ without loading a model:
 ```bash
 python -m scripts.recompute_urm_passk \
     --runs runs/urm_evaluations/baseline_seed0_60ep runs/urm_evaluations/fractal_seed0_60ep
+python -m scripts.recompute_urm_passk --expected-step 9614 \
+    --runs runs/urm_evaluations/baseline_seed0_120ep runs/urm_evaluations/fractal_seed0_120ep
 ```
 
 The recomputation implements cropping, query matching, candidate ranking and
@@ -255,10 +257,12 @@ setting (`hrm_official/`, `trm_official/`, `urm_official/`,
 - URM original-query evaluation: the HRM-prepared data used for URM encode
   augmentations in puzzle identifiers as `<task>_t<transform>_<permutation>`,
   a format not handled by the upstream URM decoder; `eval/urm_arc.py` adds
-  decoding for it. The 60-epoch baseline and URM-F evaluations are in
-  `results/urm_official/eval_60ep/`: for each run, `audit_summary.json`
+  decoding for it. The 60- and 120-epoch baseline and URM-F evaluations are in
+  `results/urm_official/eval_60ep/` and `results/urm_official/eval_120ep/`:
+  for each run, `audit_summary.json`
   (metrics, effective configuration and source hashes) and the ARC submission
-  in `evaluator_ARC_step_4807/`. `recompute_passk_output.txt` contains the
+  in `evaluator_ARC_step_4807/` or `evaluator_ARC_step_9614/`.
+  `recompute_passk_output.txt` contains the
   ARC/pass@k recomputed from the saved predictions, with the number of solved
   queries and entirely solved tasks at each k. Saved predictions and
   checkpoints are not included because of their size.
@@ -274,10 +278,10 @@ setting (`hrm_official/`, `trm_official/`, `urm_official/`,
   (`results/hrm_official/original_task_scores/`). TRM: ARC/pass@1 and
   ARC/pass@2 recomputed from the saved submissions
   (`results/trm_official/recompute_pass12_output.txt`); values at larger k
-  are those recorded by the evaluator. URM, 60 epochs: ARC/pass@k at k = 1, 2,
-  100 and 1000 recomputed from the saved predictions
-  (`results/urm_official/eval_60ep/recompute_passk_output.txt`).
-- For the 120-epoch and damped runs, only the sequence-level metrics in
+  are those recorded by the evaluator. URM, 60 and 120 epochs: ARC/pass@k at k = 1,
+  2, 100 and 1000 recomputed from the saved predictions
+  (`recompute_passk_output.txt` in `eval_60ep/` and `eval_120ep/`).
+- For the damped runs, only the sequence-level metrics in
   `results/urm_official/` (token accuracy, loss and augmented-sequence exact
   accuracy) are used in the paper.
 - Only the final rapid HRM series is included; the preliminary rapid HRM

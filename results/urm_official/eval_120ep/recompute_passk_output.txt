@@ -1,0 +1,61 @@
+SCRIPT: /home/sneri/fractal-recursion/scripts/recompute_urm_passk.py
+SCRIPT SHA256: 762b7e41f8e34fd31b3f6f4b8fceb7141d8db04ebb0b618d5bdf26bfff2f6f4c
+Saved data only; no training or inference.
+Raw data checked: 400 tasks and 419 queries.
+
+=== RUN: baseline_seed0_120ep ===
+FOLDER: runs/urm_evaluations/baseline_seed0_120ep
+Rows processed: 50000/385814
+Rows processed: 100000/385814
+Rows processed: 150000/385814
+Rows processed: 200000/385814
+Rows processed: 250000/385814
+Rows processed: 300000/385814
+Rows processed: 350000/385814
+Coverage: 400 tasks, 419 queries; unmatched sequences: 0
+PASS: the first two candidates match the submission.
+k=1: mean_per_task=0 (0%); queries=0/419; entirely_solved_tasks=0/400; evaluator=0; match=True
+k=2: mean_per_task=0 (0%); queries=0/419; entirely_solved_tasks=0/400; evaluator=0; match=True
+  @100: task=bbb1b8b6, query_index=1, rank=8
+  @100: task=6ea4a07e, query_index=0, rank=34
+  @100: task=6ea4a07e, query_index=1, rank=28
+  @100: task=642d658d, query_index=0, rank=13
+  @100: task=1a2e2828, query_index=0, rank=33
+  @100: task=8597cfd7, query_index=0, rank=67
+k=100: mean_per_task=0.01125 (1.125%); queries=6/419; entirely_solved_tasks=4/400; evaluator=0.01125; match=True
+  @1000: task=bbb1b8b6, query_index=0, rank=123
+  @1000: task=bbb1b8b6, query_index=1, rank=8
+  @1000: task=6ea4a07e, query_index=0, rank=34
+  @1000: task=6ea4a07e, query_index=1, rank=28
+  @1000: task=642d658d, query_index=0, rank=13
+  @1000: task=1a2e2828, query_index=0, rank=33
+  @1000: task=8597cfd7, query_index=0, rank=67
+k=1000: mean_per_task=0.0125 (1.25%); queries=7/419; entirely_solved_tasks=5/400; evaluator=0.0125; match=True
+PASS: all four scores match.
+
+=== RUN: fractal_seed0_120ep ===
+FOLDER: runs/urm_evaluations/fractal_seed0_120ep
+Rows processed: 50000/385814
+Rows processed: 100000/385814
+Rows processed: 150000/385814
+Rows processed: 200000/385814
+Rows processed: 250000/385814
+Rows processed: 300000/385814
+Rows processed: 350000/385814
+Coverage: 400 tasks, 419 queries; unmatched sequences: 0
+PASS: the first two candidates match the submission.
+k=1: mean_per_task=0 (0%); queries=0/419; entirely_solved_tasks=0/400; evaluator=0; match=True
+k=2: mean_per_task=0 (0%); queries=0/419; entirely_solved_tasks=0/400; evaluator=0; match=True
+  @100: task=bbb1b8b6, query_index=0, rank=73
+  @100: task=bbb1b8b6, query_index=1, rank=4
+  @100: task=6ea4a07e, query_index=1, rank=33
+  @100: task=642d658d, query_index=0, rank=8
+k=100: mean_per_task=0.00625 (0.625%); queries=4/419; entirely_solved_tasks=2/400; evaluator=0.00625; match=True
+  @1000: task=bbb1b8b6, query_index=0, rank=73
+  @1000: task=bbb1b8b6, query_index=1, rank=4
+  @1000: task=6ea4a07e, query_index=1, rank=33
+  @1000: task=642d658d, query_index=0, rank=8
+k=1000: mean_per_task=0.00625 (0.625%); queries=4/419; entirely_solved_tasks=2/400; evaluator=0.00625; match=True
+PASS: all four scores match.
+
+CHECK COMPLETE: no model loaded, no training or inference.

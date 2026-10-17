@@ -1,18 +1,6 @@
 {
   "files": [
     {
-      "file": "baseline_seed0_120ep_metrics.json",
-      "source_relative_to_urm_original": "evaluations/URM_baseline_step9614_120ep_v1/metrics.json",
-      "bytes": 417,
-      "sha256": "013022daf8f02be43a0ae91a6728a5f97118b0068f9d2f013bcad445c89ee481"
-    },
-    {
-      "file": "fractal_seed0_120ep_metrics.json",
-      "source_relative_to_urm_original": "evaluations/URMF_step9614_120ep_batch48_v1/metrics.json",
-      "bytes": 456,
-      "sha256": "70d8ff0537d99e22b559160f10e6e206be075d5462ba026dcbda9198fb353fa9"
-    },
-    {
       "file": "fractal_damped_a025_seed0_30ep_metrics.json",
       "source_relative_to_urm_original": "evaluations/URMF_damped_a025_step2405_batch48_v1/metrics.json",
       "bytes": 459,
