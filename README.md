@@ -171,6 +171,14 @@ python -m train.trm --config-name baseline_seed0_eval
 python -m train.trm --config-name fractal_seed0_eval
 ```
 
+The saved submissions are in `results/trm_official/`. ARC/pass@1 and
+ARC/pass@2 can be recomputed from them on the CPU; the submissions contain
+two candidates per query, so larger k cannot be recomputed this way:
+
+```bash
+python -m scripts.recompute_trm_pass12
+```
+
 **URM.** Evaluates one run on the held-out test queries (16 loops), using the
 augmentation-identifier decoding in `eval/urm_arc.py`, and writes
 `runs/urm_evaluations/<run>/metrics.json`:
@@ -261,6 +269,14 @@ setting (`hrm_official/`, `trm_official/`, `urm_official/`,
 - ARC/pass@k is the mean over tasks of the fraction of test queries whose
   expected output is among the first k distinct ranked candidates; it differs
   from the fraction of entirely solved tasks.
+- Original-query scores were checked as follows. HRM: task-level scores at k
+  computed with `eval.hrm_candidates`
+  (`results/hrm_official/original_task_scores/`). TRM: ARC/pass@1 and
+  ARC/pass@2 recomputed from the saved submissions
+  (`results/trm_official/recompute_pass12_output.txt`); values at larger k
+  are those recorded by the evaluator. URM, 60 epochs: ARC/pass@k at k = 1, 2,
+  100 and 1000 recomputed from the saved predictions
+  (`results/urm_official/eval_60ep/recompute_passk_output.txt`).
 - For the 120-epoch and damped runs, only the sequence-level metrics in
   `results/urm_official/` (token accuracy, loss and augmented-sequence exact
   accuracy) are used in the paper.

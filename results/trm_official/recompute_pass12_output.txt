@@ -1,0 +1,19 @@
+SCRIPT SHA256: 7b986e07ed5ce14fdf176b1d4ccd5bf76cc60835453a3ad7f8e307f373ed9af1
+Saved submissions only; no model loaded, no training or inference.
+Raw data checked: 400 tasks and 419 queries.
+
+=== RUN: baseline_seed0 ===
+SUBMISSION: results/trm_official/baseline_seed0_submission.json SHA256: 18104add939330eee560fae7c6fdcfe2f2495cdca1c3d596ec3e9176adfa086c
+Coverage: 400 tasks, 419 queries.
+k=1: mean_per_task=0 (0%); queries=0/419; entirely_solved_tasks=0/400; evaluator=0; match=True
+k=2: mean_per_task=0 (0%); queries=0/419; entirely_solved_tasks=0/400; evaluator=0; match=True
+PASS: both scores match.
+
+=== RUN: fractal_seed0 ===
+SUBMISSION: results/trm_official/fractal_seed0_submission.json SHA256: babb8928729062fbf4aae9eba8b2156f2ecae23e9318a4055eac32754cb9259f
+Coverage: 400 tasks, 419 queries.
+k=1: mean_per_task=0 (0%); queries=0/419; entirely_solved_tasks=0/400; evaluator=0; match=True
+k=2: mean_per_task=0 (0%); queries=0/419; entirely_solved_tasks=0/400; evaluator=0; match=True
+PASS: both scores match.
+
+CHECK COMPLETE: no model loaded, no training or inference.
