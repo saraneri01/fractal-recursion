@@ -3,10 +3,13 @@
 Each run name selects the training configuration and the evaluated checkpoint.
 Evaluation uses the held-out test queries, a horizon of 16 loops and an
 evaluation batch size of 48. Metrics are printed and written to
-runs/urm_evaluations/<run>/metrics.json.
+runs/urm_evaluations/<run>/metrics.json. With --save-predictions, the inputs,
+labels, predictions, puzzle identifiers and halting logits of every evaluated
+sequence are also saved as .npy arrays, so that ARC/pass@k can be recomputed
+without further inference (see scripts/recompute_urm_passk.py).
 
 Usage:
-    python -m eval.urm --run baseline_seed0_60ep
+    python -m eval.urm --run baseline_seed0_60ep --save-predictions
 """
 import argparse
 import json
@@ -48,9 +51,60 @@ def to_jsonable(value):
     return value
 
 
+# Runs whose stored checkpoint step was verified when loading.
+CHECKED_STEPS = {'baseline_seed0_60ep', 'fractal_seed0_60ep', 'baseline_seed0_120ep', 'fractal_seed0_120ep'}
+
+
+def attach_prediction_recorder(evaluator, data_path, out):
+    """Save every evaluated sequence as compact .npy arrays while the evaluator runs."""
+    shape = np.load(Path(data_path) / 'test/all__inputs.npy', mmap_mode='r').shape
+    n_sequences = shape[0]
+    specs = (
+        ('inputs', np.uint8, shape),
+        ('labels', np.int8, shape),
+        ('preds', np.uint8, shape),
+        ('puzzle_identifiers', np.int32, (n_sequences,)),
+        ('q_halt_logits', np.float32, (n_sequences,)),
+    )
+    arrays = {name: np.lib.format.open_memmap(out / f'{name}.npy', mode='w+', dtype=dtype, shape=dims)
+              for name, dtype, dims in specs}
+    state = {'count': 0}
+    original_update = evaluator.update_batch
+
+    def update(batch, preds):
+        values = {
+            'inputs': batch['inputs'].detach().cpu().numpy(),
+            'labels': batch['labels'].detach().cpu().numpy(),
+            'puzzle_identifiers': batch['puzzle_identifiers'].detach().cpu().numpy(),
+            'preds': preds['preds'].detach().cpu().numpy(),
+            'q_halt_logits': preds['q_halt_logits'].detach().cpu().numpy(),
+        }
+        valid = (values['labels'] != -100).any(axis=1)
+        start = state['count']
+        end = start + int(valid.sum())
+        if end > n_sequences:
+            raise RuntimeError('More evaluated sequences than expected')
+        for name, array in arrays.items():
+            array[start:end] = values[name][valid]
+        state['count'] = end
+        return original_update(batch, preds)
+
+    evaluator.update_batch = update
+
+    def finish():
+        for array in arrays.values():
+            array.flush()
+        if state['count'] != n_sequences:
+            raise RuntimeError(f"Incomplete predictions: {state['count']}/{n_sequences}")
+        print(f"Saved predictions for {state['count']} sequences in {out}")
+
+    return finish
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument('--run', required=True, choices=sorted(RUNS), help='Configuration and checkpoint to evaluate.')
+    parser.add_argument('--save-predictions', action='store_true', help='Also save compact .npy arrays of all evaluated sequences.')
     args = parser.parse_args()
 
     step = RUNS[args.run]
@@ -95,11 +149,17 @@ def main():
     if loop_config is not None:
         loop_config.loops = EVAL_LOOPS
     print('checkpoint loaded: step', train_state.step)
-    if step == 9614:  # the 120-epoch checkpoints record their step; check it
+    if args.run in CHECKED_STEPS:
         assert train_state.step == step, f'Unexpected checkpoint step: {train_state.step}'
+    finish_recording = None
+    if args.save_predictions:
+        config.eval_save_outputs = []
+        finish_recording = attach_prediction_recorder(evaluators[0], config.data_path, out)
 
     print('===== START EVALUATION =====')
     metrics = pt.evaluate(config, train_state, eval_loader, eval_metadata, evaluators, rank=0, world_size=1, cpu_group=None)
+    if finish_recording is not None:
+        finish_recording()
     print('\n===== FINAL METRICS =====')
     for key in sorted(metrics):
         print(f'{key}: {metrics[key]}')

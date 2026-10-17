@@ -184,6 +184,19 @@ python -m eval.urm --run fractal_damped_a025_seed0_30ep
 python -m eval.urm --run fractal_damped_a025_seed0_60ep
 ```
 
+With `--save-predictions`, every evaluated sequence is also saved as `.npy`
+arrays (about 1 GB per run). ARC/pass@k can then be recomputed on the CPU,
+without loading a model:
+
+```bash
+python -m scripts.recompute_urm_passk \
+    --runs runs/urm_evaluations/baseline_seed0_60ep runs/urm_evaluations/fractal_seed0_60ep
+```
+
+The recomputation implements cropping, query matching, candidate ranking and
+scoring separately from the ARC evaluator, but reuses the dataset's inverse
+geometric transform.
+
 **Rapid HRM task-level analysis** (paper, Appendix A), for each seed 0–4:
 
 ```bash
@@ -237,8 +250,10 @@ setting (`hrm_official/`, `trm_official/`, `urm_official/`,
   decoding for it. The 60-epoch baseline and URM-F evaluations are in
   `results/urm_official/eval_60ep/`: for each run, `audit_summary.json`
   (metrics, effective configuration and source hashes) and the ARC submission
-  in `evaluator_ARC_step_4807/`. Saved predictions and checkpoints are not
-  included because of their size.
+  in `evaluator_ARC_step_4807/`. `recompute_passk_output.txt` contains the
+  ARC/pass@k recomputed from the saved predictions, with the number of solved
+  queries and entirely solved tasks at each k. Saved predictions and
+  checkpoints are not included because of their size.
 - HRM: `results/hrm_official/wandb_summaries/` contains, for the runs whose
   evaluation metrics were recorded during training, the W&B summary and the
   run configuration; `results/hrm_official/original_task_scores/` contains the
