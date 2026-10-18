@@ -222,6 +222,7 @@ python -m scripts.audit_hrm_state_parity
 python -m scripts.audit_hrm_gradpath
 python -m scripts.audit_trm_structure
 python -m scripts.audit_trm_gradpath
+python -m scripts.audit_hrm_trajectory    # HRM trajectory audit (Appendix B)
 ```
 
 URM diagnostics on training-pipeline batches (paper, Appendix B):
